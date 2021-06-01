@@ -54,32 +54,6 @@
 
       <mat-sidenav-content [class.distance]="sidenavOpen">
         <div fxLayout="row wrap" class="all-menu-items-wrapper mt-0">
-          <div
-            fxFlex="100"
-            fxLayoutAlign="center center"
-            fxShow="false"
-            fxShow.gt-sm
-            class="px-2 mb-3"
-          >
-            <mat-button-toggle-group
-              #group="matButtonToggleGroup"
-              appearance="legacy"
-              [value]="selectedCategoryId"
-              class="categories-toogle-group mt-2"
-              (change)="onChangeCategory($event)"
-            >
-              <mat-button-toggle [value]="0" class="letter">
-                All Categories
-              </mat-button-toggle>
-              <mat-button-toggle
-                *ngFor="let category of categories"
-                [value]="category.id"
-                class="letter"
-              >
-                {{ category.name }}
-              </mat-button-toggle>
-            </mat-button-toggle-group>
-          </div>
           <div fxFlex="100" class="px-2 pb-2 pt-0">
             <app-menu-items-toolbar
               [showSidenavToggle]="showSidenavToggle"

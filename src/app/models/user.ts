@@ -5,7 +5,8 @@ export class User {
     public celphone: string,
     public identification: number,
     public name: string,
-    public lastName: string
+    public lastName: string,
+    public role: string
   ) {}
 }
 

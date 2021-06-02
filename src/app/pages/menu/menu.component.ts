@@ -105,6 +105,10 @@ export class MenuComponent implements OnInit {
       // this.menuItems = this.appService.shuffleArray(data);
       // this.menuItems = data;
       let menuData: ResponseMenu = data;
+      //TODO Fix to save in microservice
+      for (let u of menuData.data) {
+        u.availibilityCount = 1000;
+      }
 
       let result = this.filterData(menuData.data);
       if (result.data.length == 0) {
